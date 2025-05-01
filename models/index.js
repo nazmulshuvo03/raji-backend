@@ -9,18 +9,17 @@ const Project = require("./project")(sequelize, DataTypes);
 const Task = require("./task")(sequelize, DataTypes);
 
 // Define associations
-
 // User ↔ Group
-User.belongsTo(Group);
-Group.hasMany(User);
+User.belongsTo(Group, { foreignKey: "groupId" });
+Group.hasMany(User, { foreignKey: "groupId" });
 
 // Group ↔ Project
-Project.belongsTo(Group);
-Group.hasMany(Project);
+Project.belongsTo(Group, { foreignKey: "groupId" });
+Group.hasMany(Project, { foreignKey: "groupId" });
 
 // Project ↔ Task
-Task.belongsTo(Project);
-Project.hasMany(Task);
+Task.belongsTo(Project, { foreignKey: "projectId" });
+Project.hasMany(Task, { foreignKey: "projectId" });
 
 // User ↔ Project (creator)
 Project.belongsTo(User, { as: "creator", foreignKey: "createdBy" });

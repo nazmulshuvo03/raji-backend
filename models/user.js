@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ENUM("admin", "member"),
       defaultValue: "member",
     },
+    groupId: {
+      type: DataTypes.UUID,
+      allowNull: true,
+    },
   });
 
   return User;

@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     description: DataTypes.TEXT,
+    groupId: {
+      type: DataTypes.UUID,
+      allowNull: true,
+    },
   });
 
   return Project;

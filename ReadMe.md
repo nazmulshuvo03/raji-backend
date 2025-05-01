@@ -16,6 +16,10 @@ id, name, description, groupId (FK), createdBy (userId FK), createdAt, updatedAt
 
 id, title, description, projectId (FK), assignedTo (userId FK), status (e.g., todo/in-progress/done), dueDate, createdBy (userId FK), createdAt, updatedAt
 
+## Schema Whimsical
+
+<https://whimsical.com/raji-schema-DazmCAAmGsnUmM8fRj6WmF@4ZmX8KNja6voR8HcucjYRwuCFFJPyDtSNoSTue6EudH>
+
 ## ✅ API STRUCTURE OVERVIEW
 
 ### 1. **Auth**

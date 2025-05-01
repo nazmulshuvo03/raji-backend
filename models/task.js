@@ -15,6 +15,18 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: "todo",
     },
     dueDate: DataTypes.DATE,
+    projectId: {
+      type: DataTypes.UUID,
+      allowNull: false,
+    },
+    assignedTo: {
+      type: DataTypes.UUID,
+      allowNull: true,
+    },
+    createdBy: {
+      type: DataTypes.UUID,
+      allowNull: false,
+    },
   });
 
   return Task;
